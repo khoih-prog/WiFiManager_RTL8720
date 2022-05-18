@@ -12,7 +12,7 @@
 ## Table of Contents
 
 * [Changelog](#changelog)
-  * [Release v1.0.0](#release-v010)
+  * [Release v1.0.0](#release-v100)
 
 ---
 ---

@@ -1,4 +1,4 @@
-## WiFiManager_RT8720 (Light Weight Credentials / WiFi Manager for Generic WiFi (WiFiNINA, WiFi101, WiFiEsp, etc.)  modules/shields)
+## WiFiManager_RT8720 (Light Weight Credentials / WiFi Manager for RTL8720DN, RTL8722DM, RTL8722CSM, etc. modules/shields)
 
 [![arduino-library-badge](https://www.ardu-badge.com/badge/WiFiManager_RT8720.svg?)](https://www.ardu-badge.com/WiFiManager_RT8720)
 [![GitHub release](https://img.shields.io/github/release/khoih-prog/WiFiManager_RT8720.svg)](https://github.com/khoih-prog/WiFiManager_RT8720/releases)
@@ -58,7 +58,7 @@
 * [So, how it works?](#so-how-it-works)
   * [1. Without SCAN_WIFI_NETWORKS](#1-without-scan_wifi_networks)
   * [2. With SCAN_WIFI_NETWORKS](#2-with-scan_wifi_networks)
-* [Important Notes](#important-notes)
+* [Important Configuration Notes](#important-Configuration-notes)
 * [How to use default Credentials and have them pre-loaded onto Config Portal](#how-to-use-default-credentials-and-have-them-pre-loaded-onto-config-portal)
   * [1. To always load Default Credentials and override Config Portal data](#1-to-always-load-default-credentials-and-override-config-portal-data)
   * [2. To load Default Credentials when there is no valid Credential](#2-to-load-default-credentials-when-there-is-no-valid-credential)
@@ -112,13 +112,13 @@ If you have used the full-fledge WiFiManager such as :
 
 and have to write **complicated callback functions** to save custom parameters in SPIFFS/LittleFS/EEPROM, you'd appreciate the simplicity of this Light-Weight Credentials / WiFiManager.
 
-This library is a Light Weight Credentials / WiFiManager for RTL8720DN, RTL8722DM, RTL8722CSM, etc. boards
+This library is a Light Weight Credentials / WiFiManager for , etc. boards
 
 This is a Credentials / WiFi Connection Manager, permitting the addition of custom parameters to be configured in Config Portal. The parameters then will be saved automatically, **without the complicated callback functions** to handle data saving / retrieving.
 
 You can also specify DHCP HostName, static AP and STA IP. Use much less memory compared to full-fledge WiFiManager. Config Portal will be auto-adjusted to match the number of dynamic custom parameters. Credentials are saved in FlashStorage_RTL8720.
 
-The web configuration portal, served from the `Generic WiFi modules/shields` is operating as an access point (AP) with configurable static IP address or use default IP Address of 192.168.4.1
+The web configuration portal, served from the `RTL8720DN` is operating as an access point (AP) with configurable static IP address or use default IP Address of 192.168.4.1
 
 New recent features:
 
@@ -532,7 +532,7 @@ Enter your credentials,
 
 ---
 
-### Important Notes
+### Important Configuration Notes
 
 1. Now you can use special chars such as **~, !, @, #, $, %, ^, &, _, -, space,etc.** thanks to [brondolin](https://github.com/brondolin) to provide the amazing fix in [**Blynk_WM**](https://github.com/khoih-prog/Blynk_WM) to permit input special chars such as **%** and **#** into data fields. See [Issue 3](https://github.com/khoih-prog/Blynk_WM/issues/3).
 2. The SSIDs, Passwords must be input (or to make them different from **blank**). Otherwise, the Config Portal will re-open until those fields have been changed. If you don't need any field, just input anything or use duplicated data from similar field.
@@ -758,21 +758,21 @@ Please take a look at other examples, as well.
 
 #### 1. File [RTL8720_WiFi.ino](examples/RTL8720_WiFi/RTL8720_WiFi.ino)
 
-https://github.com/khoih-prog/WiFiManager_RT8720/blob/7c28601d1f12a5c92ca8338d1a5acaefb006ee18/examples/RTL8720_WiFi/RTL8720_WiFi.ino#L13-L167
+https://github.com/khoih-prog/WiFiManager_RT8720/blob/1f0b76463cfcf47c582d773a7e8863daf6a38a34/examples/RTL8720_WiFi/RTL8720_WiFi.ino#L14-L150
 
 
 ---
 
 #### 2. File [defines.h](examples/RTL8720_WiFi/defines.h)
 
-https://github.com/khoih-prog/WiFiManager_RT8720/blob/7c28601d1f12a5c92ca8338d1a5acaefb006ee18/examples/RTL8720_WiFi/defines.h#L13-L307
+https://github.com/khoih-prog/WiFiManager_RT8720/blob/1f0b76463cfcf47c582d773a7e8863daf6a38a34/examples/RTL8720_WiFi/defines.h#L14-L134
 
 
 ---
 
 #### 3. File [Credentials.h](examples/RTL8720_WiFi/Credentials.h)
 
-https://github.com/khoih-prog/WiFiManager_RT8720/blob/7c28601d1f12a5c92ca8338d1a5acaefb006ee18/examples/RTL8720_WiFi/Credentials.h#L13-L89
+https://github.com/khoih-prog/WiFiManager_RT8720/blob/1f0b76463cfcf47c582d773a7e8863daf6a38a34/examples/RTL8720_WiFi/Credentials.h#L14-L93
 
 
 ---
@@ -780,7 +780,7 @@ https://github.com/khoih-prog/WiFiManager_RT8720/blob/7c28601d1f12a5c92ca8338d1a
 #### 4. File [dynamicParams.h](examples/RTL8720_WiFi/dynamicParams.h)
 
 
-https://github.com/khoih-prog/WiFiManager_RT8720/blob/7c28601d1f12a5c92ca8338d1a5acaefb006ee18/examples/RTL8720_WiFi/dynamicParams.h#L13-L74
+https://github.com/khoih-prog/WiFiManager_RT8720/blob/1f0b76463cfcf47c582d773a7e8863daf6a38a34/examples/RTL8720_WiFi/dynamicParams.h#L14-L74
 
 
 ---
@@ -796,8 +796,9 @@ This is the terminal output when running [**RTL8720_WiFi**](examples/RTL8720_WiF
 #### 1.1 Open Config Portal
 
 ```
-Start RTL8720_WiFi on Rtlduino RTL8720DN
-WiFiWebServer_RTL8720 v1.1.2
+Starting RTL8720_WiFi on Rtlduino RTL8720DN
+WiFiManager_RTL8720 v1.0.0
+DoubleResetDetector_Generic v1.8.1
 interface 0 is initialized
 interface 1 is initialized
 Initializing WIFI ...
@@ -1004,13 +1005,13 @@ A client connected to this server :
 #### 1.3 Got valid Credential from Config Portal, then connected to WiFi
 
 ```
-Start RTL8720_WiFi on Rtlduino RTL8720DN
-WiFiWebServer_RTL8720 v1.1.2
+Starting RTL8720_WiFi on Rtlduino RTL8720DN
+WiFiManager_RTL8720 v1.0.0
+DoubleResetDetector_Generic v1.8.1
 interface 0 is initialized
 interface 1 is initialized
 Initializing WIFI ...
 WIFI initialized
-
 Current Firmware Version = 1.0.0
 [WG] Set CustomsStyle to : <style>div,input{padding:5px;font-size:1em;}input{width:95%;}body{text-align: center;}button{background-color:blue;color:white;line-height:2.4rem;font-size:1.2rem;width:100%;}fieldset{border-radius:0.3rem;margin:0px;}</style>
 [WG] Set CustomsHeadElement to : <style>html{filter: invert(10%);}</style>
