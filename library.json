@@ -43,7 +43,7 @@
       "platforms": "*"
     },
     {
-      "owner": "khoih.prog",
+      "owner": "khoih-prog",
       "name": "MultiResetDetector_Generic",
       "version": "^1.8.1",
       "platforms": "*"
