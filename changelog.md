@@ -1,4 +1,4 @@
-## WiFiManager_RT8720 (Light Weight Credentials / WiFiManager for RT8720DN)
+## WiFiManager_RT8720 (Light Weight Credentials / WiFi Manager for RTL8720DN, RTL8722DM, RTL8722CSM, etc. modules/shields)
 
 [![arduino-library-badge](https://www.ardu-badge.com/badge/WiFiManager_RT8720.svg?)](https://www.ardu-badge.com/WiFiManager_RT8720)
 [![GitHub release](https://img.shields.io/github/release/khoih-prog/WiFiManager_RT8720.svg)](https://github.com/khoih-prog/WiFiManager_RT8720/releases)

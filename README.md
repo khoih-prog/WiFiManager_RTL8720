@@ -217,8 +217,8 @@ These files must be copied into the directory:
 - The Config Portal is **auto-adjusted** to fix the 4 static parameters (WiFi SSIDs/PWDs) as well as 6 more dynamic custom parameters.
 - After the custom data entered, and **Save** button pressed, the configuration data will be saved in host's non-volatile memory, then the board reboots.
 - If there is valid stored Credentials, it'll go directly to connect to one of the **MultiWiFi APs** without starting / using the Config Portal.
-- `Generic WiFi module/shield` will try to connect. If successful, the dynamic DHCP and/or configured static IP address will be displayed in the configuration portal. 
-- The `Generic WiFi module/shield` WiFi Config Portal network and Web Server will shutdown to return control to the sketch code.
+- `AmebaD RTL8720` will try to connect. If successful, the dynamic DHCP and/or configured static IP address will be displayed in the configuration portal. 
+- The `AmebaD RTL8720` WiFi Config Portal network and Web Server will shutdown to return control to the sketch code.
 - In the operation, if the current WiFi connection is lost because of any reason, the system will **auto(Re)connect** to the remaining WiFi AP.
 - **If system can't connect to any of the 2 WiFi APs, the Config Portal will start**, after some pre-determined time, to permit user to update the Credentials.
 
@@ -1099,7 +1099,7 @@ Debug is enabled by default on Serial. To disable, add at the beginning of sketc
 
 If you get compilation errors, more often than not, you may need to install a newer version of the board's core or this library version.
 
-Sometimes, the library will only work if you update the `Generic WiFi module/shield` core to the newer or older version because some function compatibility.
+Sometimes, the library will only work if you update the `AmebaD RTL8720` core to the newer or older version because some function compatibility.
 
 ---
 ---
