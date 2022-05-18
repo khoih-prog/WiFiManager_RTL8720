@@ -12,6 +12,7 @@
 ## Table of Contents
 
 * [Changelog](#changelog)
+  * [Release v1.0.1-1](#release-v1011)
   * [Release v1.0.0](#release-v100)
 
 ---
@@ -19,6 +20,10 @@
 
 
 ## Changelog
+
+### Release v1.0.1-1
+
+1. Fix `library.json`
 
 ### Release v1.0.0
 
