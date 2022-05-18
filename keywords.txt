@@ -1,0 +1,75 @@
+##########################################
+# Syntax Coloring Map For ESP_WifiManager
+##########################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+WiFiManager_RT8720	KEYWORD1
+RT8720_Configuration KEYWORD1
+MenuItem  KEYWORD1
+WiFi_Credentials  KEYWORD1
+
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+connectWiFi KEYWORD2
+begin KEYWORD2
+run KEYWORD2
+setHostname
+setConfigPortalIP KEYWORD2
+setConfigPortalChannel KEYWORD2
+setConfigPortal KEYWORD2
+setSTAStaticIPConfig	KEYWORD2
+getWiFiSSID KEYWORD2
+getWiFiPW KEYWORD2
+getWiFiStatus KEYWORD2
+getFullConfigData KEYWORD2
+localIP KEYWORD2
+clearConfigData KEYWORD2
+isConfigDataValid KEYWORD2
+resetFunc KEYWORD2
+resetAndEnterConfigPortal KEYWORD2
+resetAndEnterConfigPortalPersistent KEYWORD2
+IPAddressToString KEYWORD2
+setCustomsStyle   KEYWORD2
+getCustomsStyle   KEYWORD2
+setCustomsHeadElement   KEYWORD2
+getCustomsHeadElement   KEYWORD2
+setCORSHeader   KEYWORD2
+getCORSHeader   KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
+#	LITERAL1
+
+CONFIG_DATA_SIZE  LITERAL1
+NUM_MENU_ITEMS  LITERAL1
+RT8720_HTML_HEAD  LITERAL1
+RT8720_HTML_HEAD_START  LITERAL1
+RT8720_HTML_HEAD_STYLE  LITERAL1
+RT8720_HTML_HEAD_END  LITERAL1
+RT8720_FLDSET_START LITERAL1
+RT8720_FLDSET_END LITERAL1
+RT8720_HTML_PARAM LITERAL1
+RT8720_HTML_BUTTON  LITERAL1
+RT8720_HTML_SCRIPT  LITERAL1
+RT8720_HTML_SCRIPT_ITEM LITERAL1
+RT8720_HTML_SCRIPT_END  LITERAL1
+RT8720_HTML_END LITERAL1
+
+WM_HTTP_HEAD_CL LITERAL1
+WM_HTTP_HEAD_TEXT_HTML  LITERAL1
+WM_HTTP_HEAD_TEXT_PLAIN LITERAL1
+WM_HTTP_CACHE_CONTROL LITERAL1
+WM_HTTP_NO_STORE  LITERAL1
+WM_HTTP_PRAGMA  LITERAL1
+WM_HTTP_NO_CACHE  LITERAL1
+WM_HTTP_EXPIRES LITERAL1
+WM_HTTP_CORS  LITERAL1
+WM_HTTP_CORS_ALLOW_ALL  LITERAL1
