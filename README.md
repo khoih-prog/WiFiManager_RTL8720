@@ -1,10 +1,10 @@
-## WiFiManager_RT8720 (Light Weight Credentials / WiFi Manager for RTL8720DN, RTL8722DM, RTL8722CSM, etc. modules/shields)
+## WiFiManager_RTL8720 (Light Weight Credentials / WiFi Manager for RTL8720DN, RTL8722DM, RTL8722CSM, etc. modules/shields)
 
-[![arduino-library-badge](https://www.ardu-badge.com/badge/WiFiManager_RT8720.svg?)](https://www.ardu-badge.com/WiFiManager_RT8720)
-[![GitHub release](https://img.shields.io/github/release/khoih-prog/WiFiManager_RT8720.svg)](https://github.com/khoih-prog/WiFiManager_RT8720/releases)
-[![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/khoih-prog/WiFiManager_RT8720/blob/main/LICENSE)
+[![arduino-library-badge](https://www.ardu-badge.com/badge/WiFiManager_RTL8720.svg?)](https://www.ardu-badge.com/WiFiManager_RTL8720)
+[![GitHub release](https://img.shields.io/github/release/khoih-prog/WiFiManager_RTL8720.svg)](https://github.com/khoih-prog/WiFiManager_RTL8720/releases)
+[![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/khoih-prog/WiFiManager_RTL8720/blob/main/LICENSE)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](#Contributing)
-[![GitHub issues](https://img.shields.io/github/issues/khoih-prog/WiFiManager_RT8720.svg)](http://github.com/khoih-prog/WiFiManager_RT8720/issues)
+[![GitHub issues](https://img.shields.io/github/issues/khoih-prog/WiFiManager_RTL8720.svg)](http://github.com/khoih-prog/WiFiManager_RTL8720/issues)
 
 <a href="https://www.buymeacoffee.com/khoihprog6" title="Donate to my libraries using BuyMeACoffee"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Donate to my libraries using BuyMeACoffee" style="height: 50px !important;width: 181px !important;" ></a>
 <a href="https://www.buymeacoffee.com/khoihprog6" title="Donate to my libraries using BuyMeACoffee"><img src="https://img.shields.io/badge/buy%20me%20a%20coffee-donate-orange.svg?logo=buy-me-a-coffee&logoColor=FFDD00" style="height: 20px !important;width: 200px !important;" ></a>
@@ -17,7 +17,7 @@
 
 * [Important Notes](#important-notes)
   * [WiFi.status() bug](#wifistatus-bug)
-* [Why do we need this WiFiManager_RT8720 library](#why-do-we-need-this-WiFiManager_RT8720-library)
+* [Why do we need this WiFiManager_RTL8720 library](#why-do-we-need-this-WiFiManager_RTL8720-library)
   * [Features](#features)
   * [WiFiMulti_Generic library usage](#WiFiMulti_Generic-library-usage)
   * [Currently supported Boards](#currently-supported-boards)
@@ -100,7 +100,7 @@ Therefore, the auto-reconnect feature for WiFiMulti won't work, until this bug i
 
 ---
 
-### Why do we need this [WiFiManager_RT8720 library](https://github.com/khoih-prog/WiFiManager_RT8720)
+### Why do we need this [WiFiManager_RTL8720 library](https://github.com/khoih-prog/WiFiManager_RTL8720)
 
 #### Features
 
@@ -145,7 +145,7 @@ The usage the new [WiFiMulti_Generic](https://github.com/khoih-prog/WiFiMulti_Ge
 
 #### Currently supported Boards
 
-This [**WiFiManager_RT8720** library](https://github.com/khoih-prog/WiFiManager_RT8720) currently supports these following boards:
+This [**WiFiManager_RTL8720** library](https://github.com/khoih-prog/WiFiManager_RTL8720) currently supports these following boards:
 
  1. **RTL8720DN, RTL8722DM, RTM8722CSM, etc. boards**
 
@@ -169,22 +169,22 @@ This [**WiFiManager_RT8720** library](https://github.com/khoih-prog/WiFiManager_
 
 ### Use Arduino Library Manager
 
-The best and easiest way is to use `Arduino Library Manager`. Search for [**WiFiManager_RT8720**](https://github.com/khoih-prog/WiFiManager_RT8720), then select / install the latest version.
-You can also use this link [![arduino-library-badge](https://www.ardu-badge.com/badge/WiFiManager_RT8720.svg?)](https://www.ardu-badge.com/WiFiManager_RT8720) for more detailed instructions.
+The best and easiest way is to use `Arduino Library Manager`. Search for [**WiFiManager_RTL8720**](https://github.com/khoih-prog/WiFiManager_RTL8720), then select / install the latest version.
+You can also use this link [![arduino-library-badge](https://www.ardu-badge.com/badge/WiFiManager_RTL8720.svg?)](https://www.ardu-badge.com/WiFiManager_RTL8720) for more detailed instructions.
 
 ### Manual Install
 
-1. Navigate to [**WiFiManager_RT8720**](https://github.com/khoih-prog/WiFiManager_RT8720) page.
-2. Download the latest release `WiFiManager_RT8720-main.zip`.
-3. Extract the zip file to `WiFiManager_RT8720-main` directory 
+1. Navigate to [**WiFiManager_RTL8720**](https://github.com/khoih-prog/WiFiManager_RTL8720) page.
+2. Download the latest release `WiFiManager_RTL8720-main.zip`.
+3. Extract the zip file to `WiFiManager_RTL8720-main` directory 
 4. Copy the whole 
-  - `WiFiManager_RT8720-main` folder to Arduino libraries' directory such as `~/Arduino/libraries/`.
+  - `WiFiManager_RTL8720-main` folder to Arduino libraries' directory such as `~/Arduino/libraries/`.
 
 ### VS Code & PlatformIO:
 
 1. Install [VS Code](https://code.visualstudio.com/)
 2. Install [PlatformIO](https://platformio.org/platformio-ide)
-3. Install [**WiFiManager_RT8720** library](https://registry.platformio.org/libraries/khoih-prog/WiFiManager_RT8720) by using [Library Manager](https://registry.platformio.org/libraries/khoih-prog/WiFiManager_RT8720/installation). Search for **WiFiManager_RT8720** in [Platform.io Author's Libraries](https://platformio.org/lib/search?query=author:%22Khoi%20Hoang%22)
+3. Install [**WiFiManager_RTL8720** library](https://registry.platformio.org/libraries/khoih-prog/WiFiManager_RTL8720) by using [Library Manager](https://registry.platformio.org/libraries/khoih-prog/WiFiManager_RTL8720/installation). Search for **WiFiManager_RTL8720** in [Platform.io Author's Libraries](https://platformio.org/lib/search?query=author:%22Khoi%20Hoang%22)
 4. Use included [platformio.ini](platformio/platformio.ini) file from examples to ensure that all dependent libraries will installed automatically. Please visit documentation for the other options and examples at [Project Configuration File](https://docs.platformio.org/page/projectconf.html)
 
 ---
@@ -232,14 +232,14 @@ These files must be copied into the directory:
 - Include in your sketch
 
 ```cpp
-// Must be before #include <WiFiManager_RT8720.h>
+// Must be before #include <WiFiManager_RTL8720.h>
 // Start location in EEPROM to store config data. Default 0
 // Config data Siz, not including your custom data, currently is 84 bytes)
 #define EEPROM_START      0
 
-#include <WiFiManager_RT8720.h>
+#include <WiFiManager_RTL8720.h>
 
-WiFiManager_RT8720* WiFiManager;
+WiFiManager_RTL8720* WiFiManager;
 ```
 
 #### 2. Add custom parameters
@@ -253,7 +253,7 @@ WiFiManager_RT8720* WiFiManager;
 
 /////////////// Start dynamic Credentials ///////////////
 
-//Defined in <WiFiManager_RT8720.h>
+//Defined in <WiFiManager_RTL8720.h>
 /**************************************
   #define MAX_ID_LEN                5
   #define MAX_DISPLAY_NAME_LEN      16
@@ -319,7 +319,7 @@ uint16_t NUM_MENU_ITEMS = 0;
 - When you want to open a config portal, just add
 
 ```cpp
-WiFiManager = new WiFiManager_RT8720();
+WiFiManager = new WiFiManager_RTL8720();
 WiFiManager->begin();
 ```
 
@@ -488,10 +488,10 @@ Default is `true`. Just change to `false` to Not using `Board_Name` on Config_Po
 
 Check the examples
 
-https://github.com/khoih-prog/WiFiManager_RT8720/blob/49c1aff82d2742a2e0b787a24009d2905b76ee3c/examples/RP2040_WiFi/RP2040_WiFi.ino#L22-L30
+https://github.com/khoih-prog/WiFiManager_RTL8720/blob/49c1aff82d2742a2e0b787a24009d2905b76ee3c/examples/RP2040_WiFi/RP2040_WiFi.ino#L22-L30
 
 
-https://github.com/khoih-prog/WiFiManager_RT8720/blob/49c1aff82d2742a2e0b787a24009d2905b76ee3c/examples/RP2040_WiFi/defines.h#L191-L208
+https://github.com/khoih-prog/WiFiManager_RTL8720/blob/49c1aff82d2742a2e0b787a24009d2905b76ee3c/examples/RP2040_WiFi/defines.h#L191-L208
 
 
 
@@ -512,7 +512,7 @@ In `Configuration Portal Mode`, it starts an AP called `WM_RTL8720`. Connect to 
 After you connected, please, go to http://192.168.4.1 or newly configured AP IP, you'll see this `Main` page:
 
 <p align="center">
-    <img src="https://github.com/khoih-prog/WiFiManager_RT8720/blob/main/pics/Main.png">
+    <img src="https://github.com/khoih-prog/WiFiManager_RTL8720/blob/main/pics/Main.png">
 </p>
 
 Enter your credentials, 
@@ -520,14 +520,14 @@ Enter your credentials,
 ### 1. Without SCAN_WIFI_NETWORKS
 
 <p align="center">
-    <img src="https://github.com/khoih-prog/WiFiManager_RT8720/blob/main/pics/Input.png">
+    <img src="https://github.com/khoih-prog/WiFiManager_RTL8720/blob/main/pics/Input.png">
 </p>
 
 ### 2. With SCAN_WIFI_NETWORKS
 
 
 <p align="center">
-    <img src="https://github.com/khoih-prog/WiFiManager_RT8720/blob/main/pics/Input_With_Scan.png">
+    <img src="https://github.com/khoih-prog/WiFiManager_RTL8720/blob/main/pics/Input_With_Scan.png">
 </p>
 
 
@@ -759,21 +759,21 @@ Please take a look at other examples, as well.
 
 #### 1. File [RTL8720_WiFi.ino](examples/RTL8720_WiFi/RTL8720_WiFi.ino)
 
-https://github.com/khoih-prog/WiFiManager_RT8720/blob/1f0b76463cfcf47c582d773a7e8863daf6a38a34/examples/RTL8720_WiFi/RTL8720_WiFi.ino#L14-L150
+https://github.com/khoih-prog/WiFiManager_RTL8720/blob/1f0b76463cfcf47c582d773a7e8863daf6a38a34/examples/RTL8720_WiFi/RTL8720_WiFi.ino#L14-L150
 
 
 ---
 
 #### 2. File [defines.h](examples/RTL8720_WiFi/defines.h)
 
-https://github.com/khoih-prog/WiFiManager_RT8720/blob/1f0b76463cfcf47c582d773a7e8863daf6a38a34/examples/RTL8720_WiFi/defines.h#L14-L134
+https://github.com/khoih-prog/WiFiManager_RTL8720/blob/1f0b76463cfcf47c582d773a7e8863daf6a38a34/examples/RTL8720_WiFi/defines.h#L14-L134
 
 
 ---
 
 #### 3. File [Credentials.h](examples/RTL8720_WiFi/Credentials.h)
 
-https://github.com/khoih-prog/WiFiManager_RT8720/blob/1f0b76463cfcf47c582d773a7e8863daf6a38a34/examples/RTL8720_WiFi/Credentials.h#L14-L93
+https://github.com/khoih-prog/WiFiManager_RTL8720/blob/1f0b76463cfcf47c582d773a7e8863daf6a38a34/examples/RTL8720_WiFi/Credentials.h#L14-L93
 
 
 ---
@@ -781,7 +781,7 @@ https://github.com/khoih-prog/WiFiManager_RT8720/blob/1f0b76463cfcf47c582d773a7e
 #### 4. File [dynamicParams.h](examples/RTL8720_WiFi/dynamicParams.h)
 
 
-https://github.com/khoih-prog/WiFiManager_RT8720/blob/1f0b76463cfcf47c582d773a7e8863daf6a38a34/examples/RTL8720_WiFi/dynamicParams.h#L14-L74
+https://github.com/khoih-prog/WiFiManager_RTL8720/blob/1f0b76463cfcf47c582d773a7e8863daf6a38a34/examples/RTL8720_WiFi/dynamicParams.h#L14-L74
 
 
 ---
@@ -1108,7 +1108,7 @@ Sometimes, the library will only work if you update the `AmebaD RTL8720` core to
 
 ### Issues
 
-Submit issues to: [WiFiManager_RT8720 issues](https://github.com/khoih-prog/WiFiManager_RT8720/issues)
+Submit issues to: [WiFiManager_RTL8720 issues](https://github.com/khoih-prog/WiFiManager_RTL8720/issues)
 
 ---
 ---
@@ -1174,7 +1174,7 @@ If you want to contribute to this project:
 
 ### License
 
-- The library is licensed under [MIT](https://github.com/khoih-prog/WiFiManager_RT8720/blob/main/LICENSE)
+- The library is licensed under [MIT](https://github.com/khoih-prog/WiFiManager_RTL8720/blob/main/LICENSE)
 
 ---
 
