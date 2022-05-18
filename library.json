@@ -28,7 +28,7 @@
       "owner": "khoih.prog",
       "name": "FlashStorage_RT8720",
       "version": "^1.1.0",
-      "platforms": "AmebaD"
+      "platforms": "*"
     },
     {
       "owner": "khoih.prog",
@@ -40,7 +40,7 @@
       "owner": "khoih-prog",
       "name": "WiFiMulti_Generic",
       "version": ">=1.1.1",
-      "platforms": ["*"]
+      "platforms": "*"
     },
     {
       "owner": "khoih.prog",
