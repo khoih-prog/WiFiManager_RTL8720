@@ -50,7 +50,7 @@
     }
   ],
   "frameworks": "*",
-  "platforms": "AmebaD",
+  "platforms": "*",
   "examples": "examples/*/*/*.ino",
   "headers": ["WiFiManager_RTL8720.h"]
 }
