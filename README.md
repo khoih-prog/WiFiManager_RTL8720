@@ -55,6 +55,7 @@
   * [15. How to use CONFIG_MODE_LED](#15-How-to-use-CONFIG_MODE_LED)
 * [Examples](#examples)
   * [ 1. RTL8720_WiFi](examples/RTL8720_WiFi)
+  * [ 2. RTL8720_WiFi_MQTT](examples/RTL8720_WiFi_MQTT) **New**
 * [So, how it works?](#so-how-it-works)
   * [1. Without SCAN_WIFI_NETWORKS](#1-without-scan_wifi_networks)
   * [2. With SCAN_WIFI_NETWORKS](#2-with-scan_wifi_networks)
@@ -161,8 +162,9 @@ This [**WiFiManager_RTL8720** library](https://github.com/khoih-prog/WiFiManager
  4. [`DoubleResetDetector_Generic v1.8.1+`](https://github.com/khoih-prog/DoubleResetDetector_Generic). To install, check [![arduino-library-badge](https://www.ardu-badge.com/badge/DoubleResetDetector_Generic.svg?)](https://www.ardu-badge.com/DoubleResetDetector_Generic)
  5. [`MultiResetDetector_Generic v1.8.1+`](https://github.com/khoih-prog/MultiResetDetector_Generic). To install, check [![arduino-library-badge](https://www.ardu-badge.com/badge/MultiResetDetector_Generic.svg?)](https://www.ardu-badge.com/MultiResetDetector_Generic)
  6. [`WiFiMulti_Generic library v1.1.1+`](https://github.com/khoih-prog/WiFiMulti_Generic) to use WiFiMulti function. To install, check [![arduino-library-badge](https://www.ardu-badge.com/badge/WiFiMulti_Generic.svg?)](https://www.ardu-badge.com/WiFiMulti_Generic). **New**
+ 7. [`Modified Adafruit_MQTT_Library v2.4.2+`](https://github.com/khoih-prog/Adafruit_MQTT_Library) to use MQTT examples for many boards.
 
-
+---
 ---
 
 ## Installation
@@ -194,14 +196,14 @@ You can also use this link [![arduino-library-badge](https://www.ardu-badge.com/
 
 #### 1. For AmebaD boards
 
-**To be able to compile, run on RTL8720DN, RTL8722DM, RTM8722CSM, etc. boards**, you have to copy the whole [realtek Packages_Patches](Packages_Patches/realtek/hardware/AmebaD/3.1.2) directory into Realtek AmebaD directory (~/.arduino15/packages/realtek/hardware/AmebaD/3.1.2). 
+ To avoid compile error relating to PROGMEM, you have to copy the file [Realtek AmebaD core pgmspace.h](Packages_Patches/realtek/hardware/AmebaD/3.1.2/cores/arduino/avr/pgmspace.h) into Realtek AmebaD directory (~/.arduino15/packages/realtek/hardware/AmebaD/3.1.2/cores/arduino/avr/pgmspace.h). 
 
-Supposing the Adafruit nRF52 version is 1.3.0. These files must be copied into the directory:
+Supposing the Realtek AmebaD core version is 3.1.2. This file must be copied into the directory:
+
 - `~/.arduino15/packages/realtek/hardware/AmebaD/3.1.2/cores/arduino/avr/pgmspace.h`
 
-
-Whenever a new version is installed, remember to copy these files into the new version directory. For example, new version is x.yy.zz
-These files must be copied into the directory:
+Whenever a new version is installed, remember to copy this file into the new version directory. For example, new version is x.yy.zz
+This file must be copied into the directory:
 
 - `~/.arduino15/packages/realtek/hardware/AmebaD/x.yy.zz/cores/arduino/avr/pgmspace.h`
 
@@ -501,6 +503,7 @@ https://github.com/khoih-prog/WiFiManager_RTL8720/blob/49c1aff82d2742a2e0b787a24
 ### Examples
 
  1. [RTL8720_WiFi](examples/RTL8720_WiFi)
+ 2. [RTL8720_WiFi_MQTT](examples/RTL8720_WiFi_MQTT) **New**
  
 ---
 ---
@@ -824,7 +827,7 @@ ClearFlag write = 0xd0d04321
 [WG] CrCCSum=14db,CrRCSum=14db
 [WG] Valid Stored Dynamic Data
 [WG] ======= Start Stored Config Data =======
-[WG] Hdr=WIFI_GENERIC,SSID=HueNet_5G,PW=12345678
+[WG] Hdr=RTL8720_WIFI,SSID=HueNet_5G,PW=12345678
 [WG] SSID1=HueNet2_5G,PW1=12345678
 [WG] BName=RTL8720
 [WG] i=0,id=sv1,data=OK.duckdns.org
@@ -869,7 +872,7 @@ ClearFlag write = 0xd0d04321
 [WG] 24: Waterhome, -93dB
 [WG] 27: Jasmine, -94dB
 [WG] 29: BELL040_EXT2.4G, -95dB
-[WG] SSID=WIFI_GENERIC_25,PW=MyWIFI_GENERIC_25
+[WG] SSID=RTL8720_WM_25,PW=MyRTL8720_WM_25
 [WG] IP=192.168.4.1,CH=7
 IPv4 enabled
 
@@ -879,7 +882,7 @@ WIFI deinitialized
 Initializing WIFI ...
 WIFI initialized
 Starting AP ...
-WIFI_GENERIC_25 started
+RTL8720_WM_25 started
 
 [INFO] Listen socket successfully
 [INFO] Socket conntect successfully 
@@ -1032,7 +1035,7 @@ SetFlag write = 0xd0d01234
 [WG] CrCCSum=14db,CrRCSum=14db
 [WG] Valid Stored Dynamic Data
 [WG] ======= Start Stored Config Data =======
-[WG] Hdr=WIFI_GENERIC,SSID=HueNet_5G,PW=12345678
+[WG] Hdr=RTL8720_WIFI,SSID=HueNet_5G,PW=12345678
 [WG] SSID1=HueNet2_5G,PW1=12345678
 [WG] BName=RTL8720
 [WG] i=0,id=sv1,data=OK.duckdns.org

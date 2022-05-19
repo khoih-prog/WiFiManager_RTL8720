@@ -10,11 +10,12 @@
   Built by Khoi Hoang https://github.com/khoih-prog/WiFiManager_RTL8720
   Licensed under MIT license
   
-  Version: 1.0.0
+  Version: 1.1.0
    
   Version Modified By   Date        Comments
   ------- -----------  ----------   -----------
   1.0.0   K Hoang      18/05/2022  Initial coding for RTL8720DN, RTL8722DM, RTL8722CSM, etc.
+  1.1.0   K Hoang      19/05/2022  Add MQTT example
  ********************************************************************************************************************************/
 
 #ifndef WiFiManager_RTL8720_h
@@ -30,13 +31,13 @@
 #endif
 
 #ifndef RTL8720_WIFIMANAGER_VERSION
-  #define RTL8720_WIFIMANAGER_VERSION            "WiFiManager_RTL8720 v1.0.0"
+  #define RTL8720_WIFIMANAGER_VERSION            "WiFiManager_RTL8720 v1.1.0"
 
   #define RTL8720_WIFIMANAGER_VERSION_MAJOR      1
-  #define RTL8720_WIFIMANAGER_VERSION_MINOR      0
+  #define RTL8720_WIFIMANAGER_VERSION_MINOR      1
   #define RTL8720_WIFIMANAGER_VERSION_PATCH      0
 
-  #define RTL8720_WIFIMANAGER_VERSION_INT        1000000
+  #define RTL8720_WIFIMANAGER_VERSION_INT        1001000
 
 #endif
 
@@ -1866,8 +1867,8 @@ class WiFiManager_RTL8720
         String randomNum = String(random(0xFFFFFF), HEX);
         randomNum.toUpperCase();
 
-        portal_ssid = "WM_" + randomNum;
-        portal_pass = "MyWM_" + randomNum;
+        portal_ssid = "RTL8720_WM_" + randomNum;
+        portal_pass = "MyRTL8720_WM_" + randomNum;
       }
       
       // start access point, AP only, channel 10

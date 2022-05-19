@@ -17,7 +17,7 @@
 
 WiFiManager_RTL8720* WiFiManager;
 
-void heartBeatPrint(void)
+void heartBeatPrint()
 {
   static int num = 1;
 
@@ -70,13 +70,29 @@ void setup()
 {
   // Debug console
   Serial.begin(115200);
-  while (!Serial);
+  while (!Serial && millis() < 5000);
 
   delay(200);
 
   Serial.print(F("\nStarting RTL8720_WiFi on ")); Serial.println(BOARD_NAME);
   Serial.println(RTL8720_WIFIMANAGER_VERSION);
   Serial.println(DOUBLERESETDETECTOR_GENERIC_VERSION);
+
+  if (WiFi.status() == WL_NO_SHIELD)
+  {
+    Serial.println(F("WiFi shield not present"));
+    // don't continue
+    while (true);
+  }
+
+  String fv = WiFi.firmwareVersion();
+
+  Serial.print("Current Firmware Version = "); Serial.println(fv);
+  
+  if (fv != LATEST_RTL8720_FIRMWARE) 
+  {
+    Serial.println("Please upgrade the firmware");
+  }
 
   WiFiManager = new WiFiManager_RTL8720();
 

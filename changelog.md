@@ -12,6 +12,7 @@
 ## Table of Contents
 
 * [Changelog](#changelog)
+  * [Release v1.1.0](#release-v110)
   * [Release v1.0.1-1](#release-v1011)
   * [Release v1.0.0](#release-v100)
 
@@ -20,6 +21,12 @@
 
 
 ## Changelog
+
+### Release v1.1.0
+
+1. Add MQTT example
+2. Add Adafruit_MQTT_Library `LibraryPatches`
+3. Add `platformio.ini`
 
 ### Release v1.0.1-1
 
