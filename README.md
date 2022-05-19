@@ -801,7 +801,7 @@ This is the terminal output when running [**RTL8720_WiFi**](examples/RTL8720_WiF
 
 ```
 Starting RTL8720_WiFi on Rtlduino RTL8720DN
-WiFiManager_RTL8720 v1.0.0
+WiFiManager_RTL8720 v1.1.0
 DoubleResetDetector_Generic v1.8.1
 interface 0 is initialized
 interface 1 is initialized
@@ -1010,7 +1010,7 @@ A client connected to this server :
 
 ```
 Starting RTL8720_WiFi on Rtlduino RTL8720DN
-WiFiManager_RTL8720 v1.0.0
+WiFiManager_RTL8720 v1.1.0
 DoubleResetDetector_Generic v1.8.1
 interface 0 is initialized
 interface 1 is initialized
