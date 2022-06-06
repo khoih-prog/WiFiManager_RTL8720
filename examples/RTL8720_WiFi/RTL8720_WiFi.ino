@@ -159,7 +159,7 @@ void loop()
 {
   WiFiManager->run();
   check_status();
-
+  delay(1000);
 #if USE_DYNAMIC_PARAMETERS
   displayCredentialsInLoop();
 #endif
