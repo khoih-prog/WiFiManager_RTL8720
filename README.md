@@ -15,8 +15,6 @@
 
 ## Table of Contents
 
-* [Important Notes](#important-notes)
-  * [WiFi.status() bug](#wifistatus-bug)
 * [Why do we need this WiFiManager_RTL8720 library](#why-do-we-need-this-WiFiManager_RTL8720-library)
   * [Features](#features)
   * [WiFiMulti_Generic library usage](#WiFiMulti_Generic-library-usage)
