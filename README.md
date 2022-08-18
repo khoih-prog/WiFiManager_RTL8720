@@ -89,18 +89,6 @@
 ---
 ---
 
-### Important Notes
-
-#### WiFi.status() bug
-
-The current `AmebaD core v3.1.2` has bug that once WiFi is connected, `WiFi.status()` always reports `WL_CONNECTED` even if WiFi is lost.
-
-There is no workaround yet for this `WiFi.status()` bug because `WiFi.RSSI()` is still keeping the `good` value
-
-Therefore, the auto-reconnect feature for WiFiMulti won't work, until this bug is fixed by Realtek.
-
----
-
 ### Why do we need this [WiFiManager_RTL8720 library](https://github.com/khoih-prog/WiFiManager_RTL8720)
 
 #### Features
