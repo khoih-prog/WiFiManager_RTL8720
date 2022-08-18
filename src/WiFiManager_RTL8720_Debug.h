@@ -10,12 +10,13 @@
   Built by Khoi Hoang https://github.com/khoih-prog/WiFiManager_RTL8720
   Licensed under MIT license
   
-  Version: 1.1.0
+  Version: 1.2.0
    
   Version Modified By   Date        Comments
   ------- -----------  ----------   -----------
   1.0.0   K Hoang      18/05/2022  Initial coding for RTL8720DN, RTL8722DM, RTL8722CSM, etc.
   1.1.0   K Hoang      19/05/2022  Add MQTT example
+  1.2.0   K Hoang      18/08/2022  Update to sync with Ameba Arduino SDK v3.1.3 WiFi.status() bug fix
  ********************************************************************************************************************************/
 
 #ifndef WiFiManager_RTL8720_Debug_h

@@ -15,6 +15,8 @@
 
 ## Table of Contents
 
+* [Important Notes](#important-notes)
+  * [WiFi.status() bug](#wifistatus-bug)
 * [Why do we need this WiFiManager_RTL8720 library](#why-do-we-need-this-WiFiManager_RTL8720-library)
   * [Features](#features)
   * [WiFiMulti_Generic library usage](#WiFiMulti_Generic-library-usage)
@@ -87,6 +89,7 @@
 ---
 ---
 
+
 ### Why do we need this [WiFiManager_RTL8720 library](https://github.com/khoih-prog/WiFiManager_RTL8720)
 
 #### Features
@@ -143,12 +146,13 @@ This [**WiFiManager_RTL8720** library](https://github.com/khoih-prog/WiFiManager
 ## Prerequisites
 
  1. [`Arduino IDE 1.8.19+` for Arduino](https://github.com/arduino/Arduino). [![GitHub release](https://img.shields.io/github/release/arduino/Arduino.svg)](https://github.com/arduino/Arduino/releases/latest)
- 2. [`Arduino AmebaD core 3.1.2+`](https://github.com/ambiot/ambd_arduino) for Realtek RTL8720DN, RTL8722DM and RTM8722CSM. [![GitHub release](https://img.shields.io/github/release/ambiot/ambd_arduino.svg)](https://github.com/ambiot/ambd_arduino/releases/latest)
- 3. [`FlashStorage_RTL8720 library v1.1.0+`](https://github.com/khoih-prog/FlashStorage_RTL8720). [![GitHub release](https://img.shields.io/github/release/khoih-prog/FlashStorage_RTL8720.svg)](https://github.com/khoih-prog/FlashStorage_RTL8720/releases/latest)
- 4. [`DoubleResetDetector_Generic v1.8.1+`](https://github.com/khoih-prog/DoubleResetDetector_Generic). To install, check [![arduino-library-badge](https://www.ardu-badge.com/badge/DoubleResetDetector_Generic.svg?)](https://www.ardu-badge.com/DoubleResetDetector_Generic)
- 5. [`MultiResetDetector_Generic v1.8.1+`](https://github.com/khoih-prog/MultiResetDetector_Generic). To install, check [![arduino-library-badge](https://www.ardu-badge.com/badge/MultiResetDetector_Generic.svg?)](https://www.ardu-badge.com/MultiResetDetector_Generic)
- 6. [`WiFiMulti_Generic library v1.1.1+`](https://github.com/khoih-prog/WiFiMulti_Generic) to use WiFiMulti function. To install, check [![arduino-library-badge](https://www.ardu-badge.com/badge/WiFiMulti_Generic.svg?)](https://www.ardu-badge.com/WiFiMulti_Generic). **New**
- 7. [`Modified Adafruit_MQTT_Library v2.4.2+`](https://github.com/khoih-prog/Adafruit_MQTT_Library) to use MQTT examples for many boards.
+ 2. [`Arduino AmebaD core 3.1.3+`](https://github.com/ambiot/ambd_arduino) for Realtek RTL8720DN, RTL8722DM and RTM8722CSM. [![GitHub release](https://img.shields.io/github/release/ambiot/ambd_arduino.svg)](https://github.com/ambiot/ambd_arduino/releases/latest)
+ 3. [`WiFiWebServer_RTL8720 library v1.1.2+`](https://github.com/khoih-prog/WiFiWebServer_RTL8720). [![GitHub release](https://img.shields.io/github/release/khoih-prog/WiFiWebServer_RTL8720.svg)](https://github.com/khoih-prog/WiFiWebServer_RTL8720/releases/latest)
+ 4. [`FlashStorage_RTL8720 library v1.1.0+`](https://github.com/khoih-prog/FlashStorage_RTL8720). [![GitHub release](https://img.shields.io/github/release/khoih-prog/FlashStorage_RTL8720.svg)](https://github.com/khoih-prog/FlashStorage_RTL8720/releases/latest)
+ 5. [`DoubleResetDetector_Generic v1.8.1+`](https://github.com/khoih-prog/DoubleResetDetector_Generic). To install, check [![arduino-library-badge](https://www.ardu-badge.com/badge/DoubleResetDetector_Generic.svg?)](https://www.ardu-badge.com/DoubleResetDetector_Generic)
+ 6. [`MultiResetDetector_Generic v1.8.1+`](https://github.com/khoih-prog/MultiResetDetector_Generic). To install, check [![arduino-library-badge](https://www.ardu-badge.com/badge/MultiResetDetector_Generic.svg?)](https://www.ardu-badge.com/MultiResetDetector_Generic)
+ 7. [`WiFiMulti_Generic library v1.2.2+`](https://github.com/khoih-prog/WiFiMulti_Generic) to use WiFiMulti function. To install, check [![arduino-library-badge](https://www.ardu-badge.com/badge/WiFiMulti_Generic.svg?)](https://www.ardu-badge.com/WiFiMulti_Generic). **New**
+ 8. [`Modified Adafruit_MQTT_Library v2.4.2+`](https://github.com/khoih-prog/Adafruit_MQTT_Library) to use MQTT examples for many boards.
 
 ---
 ---
@@ -182,11 +186,11 @@ You can also use this link [![arduino-library-badge](https://www.ardu-badge.com/
 
 #### 1. For AmebaD boards
 
- To avoid compile error relating to PROGMEM, you have to copy the file [Realtek AmebaD core pgmspace.h](Packages_Patches/realtek/hardware/AmebaD/3.1.2/cores/arduino/avr/pgmspace.h) into Realtek AmebaD directory (~/.arduino15/packages/realtek/hardware/AmebaD/3.1.2/cores/arduino/avr/pgmspace.h). 
+ To avoid compile error relating to PROGMEM, you have to copy the file [Realtek AmebaD core pgmspace.h](Packages_Patches/realtek/hardware/AmebaD/3.1.3/cores/arduino/avr/pgmspace.h) into Realtek AmebaD directory (~/.arduino15/packages/realtek/hardware/AmebaD/3.1.3/cores/arduino/avr/pgmspace.h). 
 
-Supposing the Realtek AmebaD core version is 3.1.2. This file must be copied into the directory:
+Supposing the Realtek AmebaD core version is 3.1.3. This file must be copied into the directory:
 
-- `~/.arduino15/packages/realtek/hardware/AmebaD/3.1.2/cores/arduino/avr/pgmspace.h`
+- `~/.arduino15/packages/realtek/hardware/AmebaD/3.1.3/cores/arduino/avr/pgmspace.h`
 
 Whenever a new version is installed, remember to copy this file into the new version directory. For example, new version is x.yy.zz
 This file must be copied into the directory:
@@ -748,21 +752,21 @@ Please take a look at other examples, as well.
 
 #### 1. File [RTL8720_WiFi.ino](examples/RTL8720_WiFi/RTL8720_WiFi.ino)
 
-https://github.com/khoih-prog/WiFiManager_RTL8720/blob/1f0b76463cfcf47c582d773a7e8863daf6a38a34/examples/RTL8720_WiFi/RTL8720_WiFi.ino#L14-L150
+https://github.com/khoih-prog/WiFiManager_RTL8720/blob/68cde022cb353d9231893ebf63f19d47cdf75392/examples/RTL8720_WiFi/RTL8720_WiFi.ino#L14-L163
 
 
 ---
 
 #### 2. File [defines.h](examples/RTL8720_WiFi/defines.h)
 
-https://github.com/khoih-prog/WiFiManager_RTL8720/blob/1f0b76463cfcf47c582d773a7e8863daf6a38a34/examples/RTL8720_WiFi/defines.h#L14-L134
+https://github.com/khoih-prog/WiFiManager_RTL8720/blob/68cde022cb353d9231893ebf63f19d47cdf75392/examples/RTL8720_WiFi/defines.h#L14-L134
 
 
 ---
 
 #### 3. File [Credentials.h](examples/RTL8720_WiFi/Credentials.h)
 
-https://github.com/khoih-prog/WiFiManager_RTL8720/blob/1f0b76463cfcf47c582d773a7e8863daf6a38a34/examples/RTL8720_WiFi/Credentials.h#L14-L93
+https://github.com/khoih-prog/WiFiManager_RTL8720/blob/68cde022cb353d9231893ebf63f19d47cdf75392/examples/RTL8720_WiFi/Credentials.h#L14-L93
 
 
 ---
@@ -770,7 +774,7 @@ https://github.com/khoih-prog/WiFiManager_RTL8720/blob/1f0b76463cfcf47c582d773a7
 #### 4. File [dynamicParams.h](examples/RTL8720_WiFi/dynamicParams.h)
 
 
-https://github.com/khoih-prog/WiFiManager_RTL8720/blob/1f0b76463cfcf47c582d773a7e8863daf6a38a34/examples/RTL8720_WiFi/dynamicParams.h#L14-L74
+https://github.com/khoih-prog/WiFiManager_RTL8720/blob/68cde022cb353d9231893ebf63f19d47cdf75392/examples/RTL8720_WiFi/dynamicParams.h#L14-L74
 
 
 ---
@@ -787,7 +791,7 @@ This is the terminal output when running [**RTL8720_WiFi**](examples/RTL8720_WiF
 
 ```
 Starting RTL8720_WiFi on Rtlduino RTL8720DN
-WiFiManager_RTL8720 v1.1.0
+WiFiManager_RTL8720 v1.2.0
 DoubleResetDetector_Generic v1.8.1
 interface 0 is initialized
 interface 1 is initialized
@@ -996,7 +1000,7 @@ A client connected to this server :
 
 ```
 Starting RTL8720_WiFi on Rtlduino RTL8720DN
-WiFiManager_RTL8720 v1.1.0
+WiFiManager_RTL8720 v1.2.0
 DoubleResetDetector_Generic v1.8.1
 interface 0 is initialized
 interface 1 is initialized
@@ -1147,6 +1151,14 @@ Submit issues to: [WiFiManager_RTL8720 issues](https://github.com/khoih-prog/WiF
 
 Please help contribute to this project and add your name here.
 
+1. Thanks to [Dakamaster](https://github.com/S10143806H) to make PR [Update README.md](https://github.com/khoih-prog/WiFiManager_RTL8720/pull/2) leading to v1.2.0
+
+
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/S10143806H"><img src="https://github.com/S10143806H.png" width="100px;" alt="S10143806H"/><br /><sub><b>Dakamaster</b></sub></a><br /></td>
+  </tr>
+</table>
 
 ---
 

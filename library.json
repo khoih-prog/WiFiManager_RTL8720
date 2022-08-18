@@ -1,6 +1,6 @@
 {
   "name": "WiFiManager_RTL8720",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "keywords": "wifi, wi-fi, MultiWiFi, multi-wifi, WiFiManager, RTL8720DN, RTL8722DM, RTM8722CSM, realtek, amebad-core, Communication, iot, credentials, persistent, config-portal, DoubleReset, MultiReset, DoubleResetDetector, littlefs, spiffs, eeprom, light-weight",
   "description": "Library to configure MultiWiFi/Credentials at runtime for Realtek RTL8720DN, RTL8722DM, RTM8722CSM, etc. boards. You can also specify DHCP HostName, static AP and STA IP. Use much less memory compared to full-fledge WiFiManager. Config Portal will be auto-adjusted to match the number of dynamic custom parameters. Optional default Credentials to be autoloaded into Config Portal to use or change instead of manually input. Credentials are saved in FlashStorage. New powerful-yet-simple-to-use feature to enable adding dynamic custom parameters from sketch and input using the same Config Portal. Double or MultiDetectDetector as well as Virtual Switches feature permits entering Config Portal as requested. Configurable Customs HTML Headers, including Customs Style, Customs Head Elements, CORS Header.",
   "authors":
@@ -26,6 +26,12 @@
   [
     {
       "owner": "khoih-prog",
+      "name": "WiFiWebServer_RTL8720",
+      "version": "^1.1.2",
+      "platforms": "*"
+    },
+    {
+      "owner": "khoih-prog",
       "name": "FlashStorage_RTL8720",
       "version": "^1.1.0",
       "platforms": "*"
@@ -43,7 +49,7 @@
     {
       "owner": "khoih-prog",
       "name": "WiFiMulti_Generic",
-      "version": ">=1.1.1",
+      "version": ">=1.2.2",
       "platforms": "*"
     },
     {

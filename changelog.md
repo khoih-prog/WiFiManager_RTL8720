@@ -12,6 +12,7 @@
 ## Table of Contents
 
 * [Changelog](#changelog)
+  * [Release v1.2.0](#release-v120)
   * [Release v1.1.0](#release-v110)
   * [Release v1.0.1-1](#release-v1011)
   * [Release v1.0.0](#release-v100)
@@ -21,6 +22,13 @@
 
 
 ## Changelog
+
+### Release v1.2.0
+
+1. Update to sync with Ameba Arduino SDK v3.1.3 WiFi.status() bug fix. Check [Update README.md](https://github.com/khoih-prog/WiFiManager_RTL8720/pull/2)
+2. Update examples
+3. Update libraries' dependencies
+4. Update `Packages' Patches`
 
 ### Release v1.1.0
 
