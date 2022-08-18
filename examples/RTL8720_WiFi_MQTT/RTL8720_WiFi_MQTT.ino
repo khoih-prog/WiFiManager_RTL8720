@@ -45,9 +45,6 @@ void heartBeatPrint()
     if (WiFi.status() == WL_CONNECTED)
     {
       Serial.print("H");        // H means connected to WiFi
-      // Bad bug or RTL8720 => if WiFi lost, WiFi.status() still is WL_CONNECTED and WiFi.RSSI() still OK.
-      // Similar bug in Portenta_H7 without workaround as in Portenta_H7, WiFi.RSSI() => 0
-      //Serial.print(WiFi.RSSI());
     }
     else
       Serial.print("F");        // F means not connected to WiFi  
@@ -326,7 +323,7 @@ void setup()
 
   // Set customized DHCP HostName
   WiFiManager->begin(HOST_NAME);
-  //Or use default Hostname "SAMD-WIFI-XXXXXX"
+  //Or use default Hostname "RTL8720-WIFI-XXXXXX"
   //WiFiManager->begin();
 }
 

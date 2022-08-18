@@ -63,13 +63,13 @@ bool LOAD_DEFAULT_CONFIG_DATA = false;
 WM_Configuration defaultConfig =
 {
   //char header[16], dummy, not used
-  "WIFI_GENERIC",
+  "RTL8720",
   // WiFi_Credentials  WiFi_Creds  [NUM_WIFI_CREDENTIALS];
   // WiFi_Credentials.wifi_ssid and WiFi_Credentials.wifi_pw
   "SSID1",  "password1",
   "SSID2",  "password2",
   //char board_name     [24];
-  "SAMD-Control",
+  "RTL8720-Control",
   // terminate the list
   //int  checkSum, dummy, not used
   0
