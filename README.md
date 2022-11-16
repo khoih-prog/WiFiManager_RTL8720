@@ -505,7 +505,7 @@ In `Configuration Portal Mode`, it starts an AP called `WM_RTL8720`. Connect to 
 After you connected, please, go to http://192.168.4.1 or newly configured AP IP, you'll see this `Main` page:
 
 <p align="center">
-    <img src="https://github.com/khoih-prog/WiFiManager_RTL8720/blob/main/pics/Main.png">
+    <img src="https://github.com/khoih-prog/WiFiManager_RTL8720/raw/main/pics/Main.png">
 </p>
 
 Enter your credentials, 
@@ -513,14 +513,14 @@ Enter your credentials,
 ### 1. Without SCAN_WIFI_NETWORKS
 
 <p align="center">
-    <img src="https://github.com/khoih-prog/WiFiManager_RTL8720/blob/main/pics/Input.png">
+    <img src="https://github.com/khoih-prog/WiFiManager_RTL8720/raw/main/pics/Input.png">
 </p>
 
 ### 2. With SCAN_WIFI_NETWORKS
 
 
 <p align="center">
-    <img src="https://github.com/khoih-prog/WiFiManager_RTL8720/blob/main/pics/Input_With_Scan.png">
+    <img src="https://github.com/khoih-prog/WiFiManager_RTL8720/raw/main/pics/Input_With_Scan.png">
 </p>
 
 
