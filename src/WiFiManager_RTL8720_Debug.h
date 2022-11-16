@@ -1,17 +1,17 @@
 /*******************************************************************************************************************************
   WiFiManager_RTL8720.h
-  
+
   For RTL8720DN, RTL8722DM, RTL8722CSM, etc. boards
 
-  WiFiManager_RTL8720 (https://github.com/khoih-prog/WiFiManager_RTL8720) is a library 
-  for the RTL8720DN, RTL8722DM, RTL8722CSM, etc. boards to enable store Credentials in FlashStorage for easy 
+  WiFiManager_RTL8720 (https://github.com/khoih-prog/WiFiManager_RTL8720) is a library
+  for the RTL8720DN, RTL8722DM, RTL8722CSM, etc. boards to enable store Credentials in FlashStorage for easy
   configuration/reconfiguration and autoconnect/autoreconnect of WiFi and other services without Hardcoding
 
   Built by Khoi Hoang https://github.com/khoih-prog/WiFiManager_RTL8720
   Licensed under MIT license
-  
+
   Version: 1.2.0
-   
+
   Version Modified By   Date        Comments
   ------- -----------  ----------   -----------
   1.0.0   K Hoang      18/05/2022  Initial coding for RTL8720DN, RTL8722DM, RTL8722CSM, etc.

@@ -8,6 +8,8 @@
 
 <a href="https://www.buymeacoffee.com/khoihprog6" title="Donate to my libraries using BuyMeACoffee"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Donate to my libraries using BuyMeACoffee" style="height: 50px !important;width: 181px !important;" ></a>
 <a href="https://www.buymeacoffee.com/khoihprog6" title="Donate to my libraries using BuyMeACoffee"><img src="https://img.shields.io/badge/buy%20me%20a%20coffee-donate-orange.svg?logo=buy-me-a-coffee&logoColor=FFDD00" style="height: 20px !important;width: 200px !important;" ></a>
+<a href="https://profile-counter.glitch.me/khoih-prog/count.svg" title="Total khoih-prog Visitor count"><img src="https://profile-counter.glitch.me/khoih-prog/count.svg" style="height: 30px;width: 200px;"></a>
+<a href="https://profile-counter.glitch.me/khoih-prog-WiFiManager_RTL8720/count.svg" title="WiFiManager_RTL8720 Visitor count"><img src="https://profile-counter.glitch.me/khoih-prog-WiFiManager_RTL8720/count.svg" style="height: 30px;width: 200px;"></a>
 
 
 ---
@@ -144,7 +146,7 @@ This [**WiFiManager_RTL8720** library](https://github.com/khoih-prog/WiFiManager
 ## Prerequisites
 
  1. [`Arduino IDE 1.8.19+` for Arduino](https://github.com/arduino/Arduino). [![GitHub release](https://img.shields.io/github/release/arduino/Arduino.svg)](https://github.com/arduino/Arduino/releases/latest)
- 2. [`Arduino AmebaD core 3.1.3+`](https://github.com/ambiot/ambd_arduino) for Realtek RTL8720DN, RTL8722DM and RTM8722CSM. [![GitHub release](https://img.shields.io/github/release/ambiot/ambd_arduino.svg)](https://github.com/ambiot/ambd_arduino/releases/latest)
+ 2. [`Arduino AmebaD core 3.1.4+`](https://github.com/ambiot/ambd_arduino) for Realtek RTL8720DN, RTL8722DM and RTM8722CSM. [![GitHub release](https://img.shields.io/github/release/ambiot/ambd_arduino.svg)](https://github.com/ambiot/ambd_arduino/releases/latest)
  3. [`WiFiWebServer_RTL8720 library v1.1.2+`](https://github.com/khoih-prog/WiFiWebServer_RTL8720). [![GitHub release](https://img.shields.io/github/release/khoih-prog/WiFiWebServer_RTL8720.svg)](https://github.com/khoih-prog/WiFiWebServer_RTL8720/releases/latest)
  4. [`FlashStorage_RTL8720 library v1.1.0+`](https://github.com/khoih-prog/FlashStorage_RTL8720). [![GitHub release](https://img.shields.io/github/release/khoih-prog/FlashStorage_RTL8720.svg)](https://github.com/khoih-prog/FlashStorage_RTL8720/releases/latest)
  5. [`DoubleResetDetector_Generic v1.8.1+`](https://github.com/khoih-prog/DoubleResetDetector_Generic). To install, check [![arduino-library-badge](https://www.ardu-badge.com/badge/DoubleResetDetector_Generic.svg?)](https://www.ardu-badge.com/DoubleResetDetector_Generic)
@@ -184,16 +186,16 @@ You can also use this link [![arduino-library-badge](https://www.ardu-badge.com/
 
 #### 1. For AmebaD boards
 
- To avoid compile error relating to PROGMEM, you have to copy the file [Realtek AmebaD core pgmspace.h](Packages_Patches/realtek/hardware/AmebaD/3.1.3/cores/arduino/avr/pgmspace.h) into Realtek AmebaD directory (~/.arduino15/packages/realtek/hardware/AmebaD/3.1.3/cores/arduino/avr/pgmspace.h). 
+ To avoid compile error relating to PROGMEM, you have to copy the file [Realtek AmebaD core pgmspace.h](Packages_Patches/realtek/hardware/AmebaD/3.1.4/cores/ambd/avr/pgmspace.h) into Realtek AmebaD directory (~/.arduino15/packages/realtek/hardware/AmebaD/3.1.4/cores/ambd/avr/pgmspace.h). 
 
-Supposing the Realtek AmebaD core version is 3.1.3. This file must be copied into the directory:
+Supposing the Realtek AmebaD core version is 3.1.4. This file must be copied into the directory:
 
-- `~/.arduino15/packages/realtek/hardware/AmebaD/3.1.3/cores/arduino/avr/pgmspace.h`
+- `~/.arduino15/packages/realtek/hardware/AmebaD/3.1.4/cores/ambd/avr/pgmspace.h`
 
 Whenever a new version is installed, remember to copy this file into the new version directory. For example, new version is x.yy.zz
 This file must be copied into the directory:
 
-- `~/.arduino15/packages/realtek/hardware/AmebaD/x.yy.zz/cores/arduino/avr/pgmspace.h`
+- `~/.arduino15/packages/realtek/hardware/AmebaD/x.yy.zz/cores/ambd/avr/pgmspace.h`
 
 
 ---
@@ -236,7 +238,7 @@ WiFiManager_RTL8720* WiFiManager;
 
 - To add custom parameters, just add
 
-```
+```cpp
 #include "defines.h"
 
 // USE_DYNAMIC_PARAMETERS defined in defined.h
@@ -300,7 +302,7 @@ uint16_t NUM_MENU_ITEMS = 0;
 
 - If you don't need to add dynamic parameters, use the following in sketch
 
-```
+```cpp
 #define USE_DYNAMIC_PARAMETERS      false
 ```
 
@@ -339,21 +341,21 @@ WiFiManager->setConfigPortalIP(IPAddress(xxx,xxx,xxx,xxx));
 
 - To set custom DHCP HostName :
  
-```
+```cpp
   // Set customized DHCP HostName
   WiFiManager->begin("SAMD_ABCDEF");
 ```
  
 or just use the default Hostname, for example "SAMD_XXXXXX" for SAMD
 
-```
+```cpp
   //Or use default Hostname "WM_RTL8720"
   //WiFiManager->begin();
 ```
 
 #### 8. To use custom HTML Style
 
-```
+```cpp
 const char NewCustomsStyle[] /*PROGMEM*/ = "<style>div,input{padding:5px;font-size:1em;}input{width:95%;}body{text-align: center;}\
 button{background-color:blue;color:white;line-height:2.4rem;font-size:1.2rem;width:100%;}fieldset{border-radius:0.3rem;margin:0px;}</style>";
 
@@ -365,13 +367,13 @@ WiFiManager->setCustomsStyle(NewCustomsStyle);
 #### 9. To use custom Head Elements
 
 
-```
+```cpp
 WiFiManager->setCustomsHeadElement("<style>html{filter: invert(10%);}</style>");
 ```
 
 #### 10. To use CORS Header
 
-```
+```cpp
 WiFiManager->setCORSHeader("Your Access-Control-Allow-Origin");
 ```
 
@@ -385,7 +387,7 @@ Once Credentials / WiFi network information is saved in the host non-volatile me
 
 #### 11.1 If you need to use and input only one set of WiFi SSID/PWD
 
-```
+```cpp
 // Permit input only one set of WiFi SSID/PWD. The other can be "NULL or "blank"
 // Default is false (if not defined) => must input 2 sets of SSID/PWD
 #define REQUIRE_ONE_SET_SSID_PW       true
@@ -394,7 +396,7 @@ But it's always advisable to use and input both sets for reliability.
  
 #### 11.2 If you need to use both sets of WiFi SSID/PWD
 
-```
+```cpp
 // Permit input only one set of WiFi SSID/PWD. The other can be "NULL or "blank"
 // Default is false (if not defined) => must input 2 sets of SSID/PWD
 #define REQUIRE_ONE_SET_SSID_PW       false
@@ -405,7 +407,7 @@ But it's always advisable to use and input both sets for reliability.
 #### 12.1 Enable auto-scan of WiFi networks for selection in Configuration Portal
 
 
-```
+```cpp
 #define SCAN_WIFI_NETWORKS                  true
 ```
 
@@ -413,7 +415,7 @@ The manual input of SSIDs is default enabled, so that users can input arbitrary 
 
 #### 12.2 Disable manually input SSIDs
 
-```
+```cpp
 // To disable manually input SSID, only from a scanned SSID lists
 #define MANUAL_SSID_INPUT_ALLOWED           false
 ```
@@ -425,7 +427,7 @@ This is for normal use-cases in which users can only select an SSID from a scann
 The maximum number of SSIDs in the list is selectable from 2 to 15 (for ESP8266/ESP32-AT shields, from 2-6). If invalid number of SSIDs is selected, the default number of 10 will be used.
 
 
-```
+```cpp
 // From 2-15
 #define MAX_SSID_IN_LIST                    8
 ```
@@ -443,7 +445,7 @@ To use, uncomment in `defines.h`.
 
 Check [retries block the main loop #18](https://github.com/khoih-prog/WiFiManager_NINA_Lite/issues/18#issue-1094004380)
 
-```
+```cpp
 #define MAX_NUM_WIFI_RECON_TRIES_PER_LOOP     2
 ```
 
@@ -457,7 +459,7 @@ Only use whenever urgent tasks in loop() can't be delayed. But if so, it's bette
 
 Check [retries block the main loop #18](https://github.com/khoih-prog/WiFiManager_NINA_Lite/issues/18#issuecomment-1006197561)
 
-```
+```cpp
 #define WIFI_RECON_INTERVAL                   30000     // 30s
 ```
 
@@ -465,7 +467,7 @@ Check [retries block the main loop #18](https://github.com/khoih-prog/WiFiManage
 
 Default is `true`. Just change to `false` to Not using `Board_Name` on Config_Portal
 
-```
+```cpp
 /////////////////////////////////////////////
 
 // Optional, to use Board Name in Menu
@@ -538,7 +540,7 @@ See this example and modify as necessary
 
 #### 1. To always load [Default Credentials](examples/RTL8720_WiFi/Credentials.h) and override Config Portal data
 
-```
+```cpp
 // Used mostly for development and debugging. FORCES default values to be loaded each run.
 // Config Portal data input will be ignored and overridden by DEFAULT_CONFIG_DATA
 bool LOAD_DEFAULT_CONFIG_DATA = true;
@@ -548,7 +550,7 @@ bool LOAD_DEFAULT_CONFIG_DATA = true;
 
 Config Portal data input will be override DEFAULT_CONFIG_DATA
 
-```
+```cpp
 // Used mostly once debugged. Assumes good data already saved in device.
 // Config Portal data input will be override DEFAULT_CONFIG_DATA
 bool LOAD_DEFAULT_CONFIG_DATA = false;
@@ -645,7 +647,7 @@ Example of [Default dynamicParams](examples/RTL8720_WiFi/dynamicParams.h)
 
 - To add custom parameters, just modify the example below
 
-```
+```cpp
 #ifndef dynamicParams_h
 #define dynamicParams_h
 
@@ -711,13 +713,13 @@ uint16_t NUM_MENU_ITEMS = 0;
 ```
 - If you don't need to add dynamic parameters, use the following in sketch
 
-```
+```cpp
 #define USE_DYNAMIC_PARAMETERS     false
 ```
 
 or
 
-```
+```cpp
 /////////////// Start dynamic Credentials ///////////////
 
 MenuItem myMenuItems [] = {};
