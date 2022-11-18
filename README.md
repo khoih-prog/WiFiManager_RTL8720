@@ -226,7 +226,7 @@ This file must be copied into the directory:
 ```cpp
 // Must be before #include <WiFiManager_RTL8720.h>
 // Start location in EEPROM to store config data. Default 0
-// Config data Siz, not including your custom data, currently is 84 bytes)
+// Config data Size, not including your custom data, currently is 84 bytes)
 #define EEPROM_START      0
 
 #include <WiFiManager_RTL8720.h>
